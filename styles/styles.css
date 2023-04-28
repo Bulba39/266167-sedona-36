@@ -1282,6 +1282,13 @@ body {
   display: flex;
 }
 
+.alert {}
+
+/*
+.modal-container-close {
+  display: none;
+} */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
