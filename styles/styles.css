@@ -1137,6 +1137,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 20;
 }
 
 .modal {
@@ -1155,10 +1156,8 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  margin-top: 64px;
-  margin-right: 52px;
-  top: 0;
-  right: 0;
+  top: 64px;
+  right: 52px;
   width: 52px;
   height: 52px;
   background-color: #F2F2F2;
@@ -1176,6 +1175,7 @@ body {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  padding-right: 40px;
 }
 
 .field-group {
@@ -1191,6 +1191,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.check-in-field,
+.check-out-field {
+  width: 140px;
 }
 
 .field {
@@ -1203,12 +1209,13 @@ body {
   color: #000000;
   background: #F2F2F2;
   border: none;
-  border-radius: 4px;
-  padding-right: 54px;
-  background-image: url(/images/icons/date.svg);
-  background-repeat: no-repeat;
-  background-position: right 20px center;
-  width: 440px;
+  border-radius: 4px 0 0 4px;
+  height: 48px;
+  width: 400px;
+}
+
+.check-field-button {
+  display: flex;
 }
 
 .field-num {
@@ -1221,12 +1228,23 @@ body {
   color: #000000;
   background: #F2F2F2;
   border: none;
-  padding: 14px 10px;
+  padding: 14px 4px;
   width: 31px;
+  text-align: center;
 }
 
 .button-plus-minus {
   display: flex;
+}
+
+.date-button {
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  width: 40px;
+  fill: grey;
+  height: 48px;
+  background: #F2F2F2;
 }
 
 .button-minus {
@@ -1237,6 +1255,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #F2F2F2;
 }
 
 .button-plus {
@@ -1247,6 +1266,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #F2F2F2;
 }
 
 .search-form-button {
@@ -1265,11 +1285,61 @@ body {
   padding: 18px;
 }
 
-.info-field {
+.tooltip {
   cursor: pointer;
   margin: 0;
   padding: 0;
   margin-left: 10px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-text {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  width: 256px;
+  background: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+  top: 41px;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content: '';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .field-group-numbers {
@@ -1279,15 +1349,59 @@ body {
 
 .number-field {
   padding-right: 46px;
-  display: flex;
 }
 
-.alert {}
+.number-field.kids {
+  padding-right: 82px;
+}
+
+.field-error-message {
+  display: none;
+}
+
+.field-error-message.is-active {
+  display: block;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF5757;
+  text-transform: initial;
+  position: absolute;
+  width: 440px;
+  right: 0;
+  bottom: -25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.field-message {
+  display: none;
+}
+
+.field-message.is-active {
+  display: block;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  text-transform: initial;
+  position: absolute;
+  width: 440px;
+  right: 0;
+  bottom: -25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 /*
 .modal-container-close {
   display: none;
 } */
+
 
 .visually-hidden {
   position: absolute;
