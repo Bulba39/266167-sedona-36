@@ -574,6 +574,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  padding-right: 5px;
 }
 
 .contact-phone:hover,
@@ -1365,7 +1366,6 @@ body {
   z-index: 20;
 }
 
-/* закрытие модального окна */
 .modal-container-close {
   display: none;
 }
@@ -1396,6 +1396,20 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  background: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background: #E6E6E6;
+  opacity: 0.3;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -1417,7 +1431,7 @@ body {
   text-transform: capitalize;
   color: #000000;
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 47px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1439,14 +1453,30 @@ body {
   color: #000000;
   background: #F2F2F2;
   border: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   height: 48px;
-  width: 400px;
+  width: 440px;
   padding-left: 20px;
+  padding-right: 50px;
+}
+
+.field:hover {
+  background: #E6E6E6;
+}
+
+.field:focus-within {
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.field:focus {
+  background: #F2F2F2;
+  outline: 3px solid #000;
 }
 
 .check-field-button {
   display: flex;
+  position: relative;
 }
 
 .field-num {
@@ -1456,12 +1486,33 @@ body {
   font-size: 18px;
   line-height: 24px;
   text-transform: lowercase;
-  color: #000000;
+  color: #000;
   background: #F2F2F2;
   border: none;
   padding: 14px 4px;
   width: 31px;
   text-align: center;
+}
+
+.field-num:hover,
+.field-num:hover {
+  background: #E6E6E6;
+  fill: black;
+  fill-opacity: 1;
+}
+
+.field-num:focus,
+.field-num:focus {
+  background: #E6E6E6;
+  opacity: 1;
+  border: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.field-num:active,
+.field-num:active {
+  background: #E6E6E6;
+  opacity: 0.3;
 }
 
 .button-plus-minus {
@@ -1474,10 +1525,15 @@ body {
   cursor: pointer;
   width: 40px;
   fill: grey;
-  height: 48px;
-  background: #F2F2F2;
-  padding-right: 38px;
-  padding-left: 4px;
+  background: transparent;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 1px;
+  top: 50%;
+  height: 40px;
+  transform: translateY(-50%);
 }
 
 .button-minus {
@@ -1489,6 +1545,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #F2F2F2;
+  fill-opacity: 0.3;
 }
 
 .button-plus {
@@ -1500,6 +1557,29 @@ body {
   justify-content: center;
   align-items: center;
   background: #F2F2F2;
+  fill-opacity: 0.3;
+}
+
+.button-minus:hover,
+.button-plus:hover {
+  background: #E6E6E6;
+  fill: black;
+  fill-opacity: 1;
+}
+
+.button-minus:focus,
+.button-plus:focus {
+  background: #E6E6E6;
+  fill: black;
+  fill-opacity: 1;
+  border: 3px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.button-minus:active,
+.button-plus:active {
+  background: #E6E6E6;
+  opacity: 0.3;
 }
 
 .search-form-button {
@@ -1516,6 +1596,16 @@ body {
   cursor: pointer;
   width: 100%;
   padding: 18px;
+}
+
+.search-form-button:focus,
+.search-form-button:hover {
+  background: #68A2CA;
+}
+
+.search-form-button:active {
+  background: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .tooltip {

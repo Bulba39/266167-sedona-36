@@ -1,12 +1,12 @@
 const closemodalBtn = document.querySelector(".modal-close-button");
 
 closemodalBtn.addEventListener("click", () => {
-  document.querySelector(".modal-container").classList.toggle(".modal-container-close");
+  document.querySelector(".modal-container").classList.toggle("modal-container-close");
 })
 
-const openmodalbtn = document.querySelector(".button-search");
+const openmodalbtn = document.querySelector(".navigation-link-buttom");
 
-openmodalBtn.addEventListener("click", (e) => {
+openmodalbtn.addEventListener("click", (e) => {
   e.preventDefault();
-  document.querySelector(".modal-container").classList.toggle(".modal-container-close");
+  document.querySelector(".modal-container").classList.toggle("modal-container-close");
 })
