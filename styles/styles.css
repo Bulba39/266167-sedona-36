@@ -536,6 +536,12 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button-sub[disabled],
+.button.disabled {
+  background: #E5E5E5;
+  pointer-events: none;
+}
+
 .field-email {
   margin: 0;
   padding: 12px 20px;
@@ -947,6 +953,12 @@ body {
 .button-submit:active {
   background-color: #68a2ca;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button-submit[disabled],
+.button.disabled {
+  background: #E5E5E5;
+  pointer-events: none;
 }
 
 .button-reset {
