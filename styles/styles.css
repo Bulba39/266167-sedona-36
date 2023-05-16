@@ -1481,6 +1481,11 @@ body {
   opacity: 0.3;
 }
 
+.modal-close-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -1674,6 +1679,11 @@ body {
 .button-quantity:active {
   background: #e6e6e6;
   opacity: 0.3;
+}
+
+.button-quantity:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .search-form-button {
