@@ -562,10 +562,14 @@ body {
 }
 
 .field-email:focus {
-  outline: none;
   background: #e6e6e6;
   outline: 3px solid #83b3d3;
   outline-offset: -3px;
+}
+
+.field-email:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .subscribe-form {
@@ -670,7 +674,7 @@ body {
   margin-left: 5px;
 }
 
-.breadcrumbs-item:last-child: {
+.breadcrumbs-item:last-child {
   margin-right: 0;
   padding-right: 0;
 }
@@ -809,10 +813,14 @@ body {
 }
 
 .range-field-input:focus {
-  outline: none;
   background: #e6e6e6;
   outline: 2px solid #83b3d3;
   outline-offset: -2px;
+}
+
+.range-field-input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .range-field-input.from {
@@ -883,6 +891,11 @@ body {
 .range-toggle:active,
 .range-toggle:focus {
   background-color: #999999;
+}
+
+.range-toggle:disabled {
+  pointer-events: none;
+  background-color: #494949;
 }
 
 .catalog-filter {
@@ -991,6 +1004,11 @@ body {
 
 .button-reset:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .catalog-search {
@@ -1533,6 +1551,11 @@ body {
   background: #f2f2f2;
 }
 
+.field:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .check-field-button {
   display: flex;
   position: relative;
@@ -1571,6 +1594,12 @@ body {
   opacity: 0.3;
 }
 
+.field-num:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  background-color: #f2f2f2;
+}
+
 .button-plus-minus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1594,6 +1623,11 @@ body {
   top: 50%;
   height: 40px;
   transform: translateY(-50%);
+}
+
+.date-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .button-minus {
