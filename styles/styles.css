@@ -206,6 +206,11 @@ body {
   left: 0;
 }
 
+.hero-logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
 .tagline {
   font-weight: 700;
   font-size: 30px;
@@ -538,7 +543,7 @@ body {
 
 .button-sub[disabled],
 .button.disabled {
-  background: #E5E5E5;
+  background: #e5e5e5;
   pointer-events: none;
 }
 
@@ -957,7 +962,7 @@ body {
 
 .button-submit[disabled],
 .button.disabled {
-  background: #E5E5E5;
+  background: #e5e5e5;
   pointer-events: none;
 }
 
@@ -1230,7 +1235,7 @@ body {
 
 .button[disabled],
 .button.disabled {
-  background: #E5E5E5;
+  background: #e5e5e5;
   pointer-events: none;
 }
 
@@ -1585,7 +1590,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 1px;
+  right: 10px;
   top: 50%;
   height: 40px;
   transform: translateY(-50%);
@@ -1669,9 +1674,10 @@ body {
   margin: 0;
   padding: 0;
   margin-left: 10px;
-  position: absolute;
+  position: relative;
   width: 26px;
   height: 26px;
+  margin-right: 47px;
 }
 
 .tooltip-toggle {
@@ -1680,6 +1686,7 @@ body {
   padding: 0;
   margin: 0;
   display: block;
+  position: relative;
 }
 
 .tooltip-text {
@@ -1731,7 +1738,7 @@ body {
 }
 
 .number-field.kids {
-  padding-right: 82px;
+  padding-right: 0;
 }
 
 .field-error-message {
